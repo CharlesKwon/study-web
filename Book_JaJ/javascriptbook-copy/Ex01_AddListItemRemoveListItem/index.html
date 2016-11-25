@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>JavaScript &amp; jQuery - Chapter 7: 리스트 아이템 추가/삭제</title>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>오늘 살 것 
+            <span id="counter">0</span>
+        </h2>
+        <ul id="list">
+            <li id="one"><em>저지방</em> 우유</li>
+            <li id="two">빵</li>
+            <li id="three">잼</li>
+            <li id="four">벌꿀</li>
+        </ul>
+        <div id="newItemButton">
+            <button href="#" id="btnShowForm">물품 추가</button>
+        </div>
+        <form id="newItemForm">
+            <input type="text" id="newItemName" placeholder="물품명"/>
+            <input type="submit" id="btnNewItem" value="추가"/>
+        </form>
+    </div>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/default.js"></script>
+</body>
+
+</html>
