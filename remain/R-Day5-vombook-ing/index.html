@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VOMBOOK</title>
+	<meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        
+        <!--jQuery Plugins-->
+        <link rel="stylesheet" href="libs/bxslider/jquery.bxslider.css">
+        <script src="libs/bxslider/jquery.bxslider.min.js"></script>
+        
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+           <div class="header">
+              <a class="logo" href="index.html"><img src="images/logo.png"></a> 
+              <ul class="gnb">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+           </div>
+           <div class="contents">
+		<div class="cover">
+		   <img class="big-logo" src="images/big-logo.png"> 
+		</div>
+        <ul class="bxslider">
+          <li><img src="works/aaa-thumb.jpg"/></li>
+          <li><img src="works/bbb-thumb.jpg"/></li>
+          <li><img src="works/ccc-thumb.jpg"/></li>
+          <li><img src="works/ddd-thumb.jpg"/></li>
+          <li><img src="works/eee-thumb.jpg"/></li>
+          <li><img src="works/fff-thumb.jpg"/></li>
+          <li><img src="works/ggg-thumb.jpg"/></li>
+          <li><img src="works/hhh-thumb.jpg"/></li>
+          <li><img src="works/iii-thumb.jpg"/></li>
+          <li><img src="works/jjj-thumb.jpg"/></li>
+          <li><img src="works/kkk-thumb.jpg"/></li>
+          <li><img src="works/lll-thumb.jpg"/></li>
+          <li><img src="works/mmm-thumb.jpg"/></li>
+          <li><img src="works/nnn-thumb.jpg"/></li>
+          <li><img src="works/ooo-thumb.jpg"/></li>
+        </ul>
+	    </div>
+           <div class="footer">vombook © 2015</div>
+        </div>
+
+        <script>
+            $('.big-logo').addClass('show', 400, 'easeOutBounce');
+            
+            $('.bxslider').bxSlider({
+                minSlides: 1,
+                maxSlides: 8,
+                slideWidth: 150,
+                slideMargin: 0,
+                ticker: true,
+                speed: 50000
+            });
+	    </script>
+    </body>
+</html>

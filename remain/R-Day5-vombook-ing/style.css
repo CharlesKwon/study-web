@@ -1,0 +1,171 @@
+body, ul, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img { 
+    vertical-align: bottom;
+}
+
+body {
+    background-image: url(images/bg.png);
+}
+
+.wrapper {
+    width: 1140px;
+    margin: 50px auto;
+    background-color: #fff;
+    background-image: url(images/logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: -90px -65px; 
+    border: 1px solid #999;
+}
+
+.header {
+    position: relative; 
+    margin: 30px;
+}
+
+.header .logo {
+    border-radius: 5px;
+}
+
+.header .gnb {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header .gnb li {
+    float: left;
+    margin-left: 20px;
+}
+
+.header .gnb li a {
+    display: block;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.header .gnb li a:hover {
+    background-color: #ddd;
+}
+
+/* INDEX */
+.contents .cover {
+    height: 400px;
+    position: relative;
+}
+
+.contents .cover .big-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+}
+.contents .cover .big-logo.show {
+    width: 800px;
+}
+
+/* ABOUT */
+.contents .about-header {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.contents .about-header .about-text {
+   width: 300px;
+   float: right;
+   padding: 40px;
+   text-align: right;
+    display: none;
+}
+
+.contents .about-header .about-text p {
+   margin: 10px 0;
+   padding: 5px; 
+   color: #999;
+   line-height: 1.4;
+}
+
+.contents .about-header .about-logo {
+    position: absolute;
+    left: 50px; 
+    bottom: -400px;
+}
+.contents .about-header .about-logo.show {
+    bottom: 0;
+}
+
+.category {
+    padding: 30px;
+    text-align: right;
+}
+.category a {
+    background: #efefef;
+    padding:  3px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.category a.active {
+    background: #ff6600;
+    color: white;
+}
+
+.works-list div {
+    overflow: hidden;
+    float: left; 
+    width: 20%; 
+}
+.works-list a {
+    display: block;
+}
+.works-list a:hover {
+    transform: scale(1.1); 
+}
+.works-list a img {
+    width: 100%;
+}
+
+.contents .gallery a {
+    display: block;
+    float: left;
+    width: 20%; 
+    overflow: hidden;
+}
+
+.contents .gallery a img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.contents .gallery a:hover img {
+    opacity: 1; 
+}
+
+/* CONTACT */
+
+.footer {
+    border-top: 1px solid #999; 
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: #999;
+    background-color: #efefef;
+}
+
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,maximum-scale=2,user-scalable=no"> -->
+	<title>HTML5</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="ctnr">
+	<a href="#main" class="skip">메인으로 바로가기</a>
+		<header class="header">
+			<h1>HTML5</h1>
+			<nav class="gnb">
+				<h2>메인 메뉴</h2><!-- 보이지는 않지만 접근성(아웃라인)을 위해-->	
+				<button type="button">메뉴 열기</button>
+				<!-- <a href="#gnb-menu">메뉴 열기</a>
+				<ul id="#gnb-menu"> -->
+				<ul id="#gnb-menu">
+					<li class="active">
+						<a href="#">메뉴 1</a>
+						<ul>
+							<li><a href="#">메뉴 1-1</a></li>
+							<li><a href="#">메뉴 1-2</a></li>
+							<li><a href="#">메뉴 1-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">메뉴 2</a>
+						<ul>
+							<li><a href="#">메뉴 2-1</a></li>
+							<li><a href="#">메뉴 2-2</a></li>
+							<li><a href="#">메뉴 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">메뉴 3</a>
+						<ul>
+							<li><a href="#">메뉴 3-1</a></li>
+							<li><a href="#">메뉴 3-2</a></li>
+							<li><a href="#">메뉴 3-3</a></li>
+						</ul>
+					</li>
+				</ul>		
+			</nav>
+			<form class="search">
+				<!-- <span>동해물과 백두산이</span> -->
+				<input type="search" required="required">
+				<input type="submit" value="검색">
+			</form>
+		</header>
+		<div class="body">
+			<main id="main">
+				<article>
+					<img hidden src="http://dummyimage.com/1024x100/000000/fff.jpg" alt="dummyimage" width="1024" height="100">
+					<!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+					<video hidden controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" />
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm" />
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />
+						<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+							<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+							<param name="allowFullScreen" value="true" />
+							<param name="wmode" value="transparent" />
+							<param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}" />
+							<img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below" />
+						</object>
+					</video>
+					<p hidden>
+						<strong>Download video:</strong> <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4 format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Ogg format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm">WebM format</a>
+					</p>
+					<div hidden class="vframe">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/JAUoeqvedMo" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div hidden class="table-rwd">
+				      <table class="table">
+				        <thead>
+				          <tr>
+				            <th>#</th>
+				            <th>Table heading</th>
+				            <th>Table heading</th>
+				            <th>Table heading</th>
+				            <th>Table heading</th>
+				            <th>Table heading</th>
+				            <th>Table heading</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <th scope="row">1</th>
+				            <td>Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell Table cell </td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				          </tr>
+				          <tr>
+				            <th scope="row">2</th>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				          </tr>
+				          <tr>
+				            <th scope="row">3</th>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				          </tr>
+				        </tbody>
+				      </table>
+				    </div>
+				    <h1>나눔고딕 테스트</h1>
+				    <p>동해물과 백두산이 마르고 닳도록</p>
+				    <form class="sign-up">
+				    	<fieldset>
+					    		<legend>회원가입(필수)</legend>
+				    		<div class="form-group"> 
+					    		<label for="email">이메일</label>
+					    		<input type="email" class="form-control" id="email" required placeholder="charles@vi-nyl.com">
+				    		</div>
+				    		<div class="form-group"> 
+					    		<label for="pw1">비밀번호</label>
+					    		<input type="password" class="form-control" id="pw1" required>
+				    		</div>
+				    		<div class="form-group"> 
+					    		<label for="pw2">비밀번호 확인</label>
+					    		<input type="password" class="form-control" id="pw2" required>
+				    		</div>
+				    	</fieldset>
+				    	<fieldset>
+				    		<legend>추가 입력 사항(옵션)</legend>
+				    		<dl>
+				    			<dt>성별</dt>
+				    			<dd>
+				    				<input type="radio" id="male" name="gender">
+				    				<label for="male">남성</label>
+				    				<input type="radio" id="female" name="gender">
+				    				<label for="female">여성</label>
+				    			</dd>
+				    			<dt>취미</dt>
+				    			<dd>
+				    				<input type="checkbox" id="movie">
+				    				<label for="movie">영화</label>
+				    				<input type="checkbox" id="music">
+				    				<label for="music">음악감상</label>
+				    			</dd>
+				    		</dl>
+				    	</fieldset>
+				    	<button type="summit">확인</button>
+				    </form>
+
+				    <!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					  Launch demo modal
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					      </div>
+					      <div class="modal-body">
+					        ...
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</article>
+			</main>
+			<nav class="lnb">
+				<h2>메뉴 1</h2><!-- 보이지는 않지만 접근성을 위해-->
+				<ul>
+					<li><a href="#">메뉴 1-1</a></li>
+					<li><a href="#">메뉴 1-2</a></li>
+					<li><a href="#">메뉴 1-3</a></li>
+				</ul>
+			</nav>
+			<aside class="aside">
+				<h2>바로가기</h2><!-- 보이지는 않지만 접근성을 위해-->
+				<ul>
+					<li><a href="#">참고 링크 1</a></li>
+					<li><a href="#">참고 링크 2</a></li>
+					<li><a href="#">참고 링크 3</a></li>
+				</ul>
+			</aside>
+		</div>
+		<footer class="footer">
+			<p>Copyright &copy; FE.CAMP. All rights reserved.</p>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="default.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>챕터 4 - 1 : Hover</title> 
+<link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css"/>
+    
+<style>
+        
+    body {
+        background: #ebc000;
+    }
+        
+    #buttons button {
+        display: block;
+        float: left;
+        width: 224px;
+        height: 80px;
+        margin: 0 10px 20px;
+        padding: 0;
+        font-size: 16px;
+        letter-spacing: 0.15em;
+        color: #ebc000;
+        background-color: #fff;
+        border-radius: 20px;
+        
+        border: 0px solid rgba(174, 94, 155, 1.0);
+        
+        position: relative;
+    }
+        
+    #buttons button .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        
+    }
+    #buttons button span span {
+        display: block;
+        width: 224px;
+        height: 80px;
+        line-height: 80px;
+        color: #fff;
+        background-color: #ae5d9b;
+        border-radius: 20px;
+    }
+        
+</style>
+</head>
+    
+<body>
+    <div class="page-main">
+        <div id="buttons">
+            <h2>HOVER</h2>
+            <div class="inner clearfix">
+                 
+                <button>A</button>    
+                <button>B</button>    
+                <button>C</button>    
+                <button>D</button>    
+                    
+                <button>E</button>    
+                <button>F</button>    
+                <button>G</button>    
+                <button>H</button>    
+                    
+                <button>I
+                    <span class="bg">
+                        <span>I</span>
+                    </span>
+                </button>
+                <button>J
+                    <span class="bg">
+                        <span>J</span>
+                    </span>
+                </button>    
+                <button>K
+                    <span class="bg">
+                        <span>K</span>
+                    </span>
+                </button>    
+                <button>L
+                    <span class="bg">
+                        <span>L</span>
+                    </span>
+                </button>    
+                    
+            </div>
+        </div>
+    </div>
+    
+	<!--<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>-->
+    
+    <!--<script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+	<script src="js/default.js"></script>
+</body>
+</html>

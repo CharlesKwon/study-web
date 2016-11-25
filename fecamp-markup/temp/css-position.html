@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Position</title>
+	<style>
+	.po{
+		background: silver;
+	}
+
+	.static{
+		position: static;
+		top: 100px; left: 200px; /*이값은 무시된다.*/
+	}
+	.relative{
+		position: relative;
+		top: 100px; left:200px;
+	}
+	.absolute{
+		position: absolute;
+		top: 50px; left: 50px;
+	}
+	.fixed{
+		position: fixed;
+		bottom: 100px;
+		right: 100px;
+	}
+	body{
+	 	height: 3000px;	
+	}
+	</style>
+</head>
+	<span class="po static">static</span>
+	<span class="po relative">relative</span>.
+	<div style="position:relative; top:50px; background:red; height:50px;">
+		<span class="po absolute">absolute</span>
+	</div>
+	<span class="po fixed">fixed</span>
+<body>
+
+</body>
+</html>

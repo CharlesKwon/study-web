@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>챕터 4 - 2 : Caption</title> 
+<link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css"/>
+    
+<style>
+        
+    body {
+        background: #ebc000;
+    }
+        
+    #images p {
+        overflow: hidden;
+        position: relative;
+        width: 580px;
+        height: 380px;
+    }
+    #images p strong {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        bottom: 0;
+        width: 540px;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: left;
+        padding: 20px;
+        color: #fff;
+    }
+    #images p span {
+        position: absolute;
+        display: block;
+        z-index: 0;
+        /*top: 0;*/
+        width: 580px;
+        height: 380px;
+        
+        box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6),
+                    inset 0 0 100px rgba(50, 30, 0, 0.3);
+        background: rgba(255, 155, 0, 0.2);
+        opacity: 0.2;
+    }
+      
+    #images p:nth-child(1) strong {
+        opacity: 0;
+    }
+
+    #images p:nth-child(2) strong {
+        opacity: 0;
+        left: -200%;
+    }
+
+    #images p:nth-child(3) strong {
+        bottom: -80px;
+        background: rgba(34, 34, 34, 1);
+    } 
+    #images p:nth-child(3) img {
+        position: absolute;
+        top: 0;
+    }
+    
+</style>
+</head>
+    
+<body>
+    <div class="page-main">
+        <div id="images">
+            <h2>CAPTION</h2>
+            <div class="inner clearfix">
+                <P>
+                    <img src="img/01_img.jpg">
+                    <strong>Humingbird</strong>
+                    <span></span>
+                </P>  
+                <P>
+                    <img src="img/02_img.jpg">
+                    <strong>Sitta</strong>
+                    <span></span>
+                </P>  
+                <P>
+                    <img src="img/03_img.jpg">
+                    <strong>Bee-eater</strong>
+                    <span></span>
+                </P>
+            </div>
+        </div>
+    </div>
+    
+	<!--<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>-->
+    
+    <!--<script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+	<script src="js/default.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,224 @@
+/*reset*/
+ul, p, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    
+}
+img {
+    display: block;
+    vertical-align: bottom;
+}
+
+/*common*/ 
+body {
+    background-image: url(images/bg.png);
+}
+.wrapper {
+    background-color: white;
+    background-image: url(images/logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: -90px -60px;
+    border: 1px solid #999;
+    width: 1140px;
+    margin: 50px auto;
+}
+.header {
+    position: relative; 
+    margin: 30px;
+}
+.header .logo img{
+    border-radius: 5px;
+}
+.header .gnb {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.header .gnb li {
+    float: left;
+}
+.header .gnb li a {
+    display: block;
+    padding: 11px 20px;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+.header .gnb li a:hover {
+    background: #efefef;
+}
+.header .gnb li a.active {
+    background: #59b3a2;
+    color: white;
+}
+
+/* index */
+.index-cover {
+    height: 500px;
+    position: relative;
+}
+.index-cover .big-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 800px;
+}
+.contents {
+    position: relative;
+    overflow: auto;
+}
+.footer {
+    background-color: #efefef;   
+    padding: 30px;
+    border-top: 1px solid #999;
+    text-align: center;
+}
+
+/*about*/
+.about-cover {
+    margin-right: 45px;
+    margin-top: 45px;
+    overflow: hidden;
+    position: relative;
+}
+.about-cover .about-title {
+    float: right;
+    margin-right: -5px; 
+    margin-bottom: 15px
+}
+.about-cover p {
+    clear: both;
+    float: right;
+    color: #999;
+    line-height: 20px;
+    width: 300px;
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 70px;
+}
+.about-cover .about-logo {
+    position: absolute;
+    left: 110px;
+    bottom: 0;
+}
+
+/*portfolio*/
+.pf-head img {
+    border: 5px solid white;
+    box-shadow: 0px 0px 4px #666;
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    left: 30px;
+    top: 5px;
+}
+.pf-head .name {
+    color: #2f8e7c;
+    font-size: 50px;
+    font-family: Arial;
+    padding-left: 165px;
+    padding-top: 30px;
+}
+.pf-head>div {
+    background: #59b3a2; 
+    border-top: 5px solid #2f8e7c;
+    overflow: auto;
+}
+.pf-head ul {
+    float: right;
+}
+.pf-head li {
+    float: left;
+}
+.pf-head a {
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.pf-head a.active{
+    background: white;
+    color: #333;
+}
+.pf-cover .pf-body {
+    overflow: hidden;
+    margin: 5px 0;
+}
+.pf-body li {
+    float:left;
+    overflow: hidden;
+}
+.pf-body a {
+    transition: .25s;
+}
+.pf-body a:hover {
+    transform: scale(1.1);
+}
+.pf-body a img {
+    width:228px;
+}
+
+/*contact*/
+.contact-cover ul {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1090px;
+    overflow: auto;
+}
+.contact-cover ul>:first-child {
+    margin-left: 5px;
+}
+.contact-cover ul>:last-child {
+    margin-right: 0px;
+}
+.contact-cover li {  
+    float: left;
+    width: 340px;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin: 20px 15px 30px 0;
+    box-shadow: 0 0 4px #666;
+    text-align: center;
+    position: relative;
+    transition: .25s;
+}
+.contact-cover li:hover {
+    top: -5px;
+}
+.contact-cover li.fb {
+    background: #e65d5d;
+}
+.contact-cover li.li {
+    background: #6fc1d2;
+}
+.contact-cover li.em {
+    background: #7dc692;
+}
+.contact-cover li img {
+    display: inline;
+}
+.contact-cover p {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 10px 10px;
+    font-family: Arial;
+    font-size: 14px;
+    color: white; 
+    padding: 15px;
+}
+.contact-cover strong {
+    font-size: 22px;
+}

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBlog", "VBlog\VBlog.csproj", "{dcafbc6b-28d9-4fe1-a34e-df453729f4b2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBlogScreens", "VBlog\VBlogScreens\VBlogScreens.csproj", "{90abf648-932c-4a3d-8a7a-4b16309fb37d}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90ABF648-932C-4A3D-8A7A-4B16309FB37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90ABF648-932C-4A3D-8A7A-4B16309FB37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90ABF648-932C-4A3D-8A7A-4B16309FB37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90ABF648-932C-4A3D-8A7A-4B16309FB37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAFBC6B-28D9-4FE1-A34E-DF453729F4B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAFBC6B-28D9-4FE1-A34E-DF453729F4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAFBC6B-28D9-4FE1-A34E-DF453729F4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAFBC6B-28D9-4FE1-A34E-DF453729F4B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

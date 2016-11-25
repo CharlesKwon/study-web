@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1,maximum-scale=2, user-scalable=no"> 
+    <title>태스트 페이지</title>
+    <style>
+        /*초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'NG', 'Helvetica', sans-serif;
+            min-width: 760px;
+            color: #555555;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        @font-face {
+            font-family: 'NG';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+            src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+        }
+        /*공통*/
+        .hidden {
+            height: 1px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .wrap {
+            width: 900px;
+            margin: 0 auto;
+            position: relative;
+            
+        }
+        /*헤더*/
+        .main_header {
+            background: #252223;
+            /*border-bottom: 5px solid #252223;*/
+            height: 40px;
+        }
+        .main_header > a > img {
+            padding-left: 40px;
+        }
+        /*메인 메뉴*/
+        .main_gnb {
+            position: absolute;
+            top: 0;
+            left: 160px;
+        }
+        .main_gnb li {
+            float: left;
+            margin-right: 5px;
+        }
+        .main_gnb li > a {
+            color: #fff;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            padding: 0 10px;
+        }
+        .main_gnb li > a:hover {
+            background: rgb(178, 130, 0);
+            height: 40px;
+            line-height: 40px;
+        }
+        .main_gnb li > .active:hover {
+            background: #edbf42;
+            color: #000;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .main_gnb li > .active {
+            background: #edbf42;
+            border-radius: 5px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        /*content*/
+        .content_wrap {
+        }
+        .content {
+        }
+        .content_header {
+            background: #eee;
+            height: 70px;
+            padding-left: 40px;
+            line-height: 70px;
+            border-top: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+        }
+        .content_body:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .content_body {
+            padding-right: 160px;
+        }
+        .content_body > .content_lnb {
+            background: #fff;
+            width: 160px;
+        }
+        .content_body > .content_section {
+            width: 100%;
+            margin-left: 160px;
+            background: #fff;
+            float: left;
+        }
+        /*콘텐츠 메뉴*/
+        .content_lnb {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            min-height: 300px;
+        }
+        .content_lnb ul {
+        }
+        .content_lnb li > a {
+            padding-left: 40px;
+            color: #171717;
+            display: block;
+            font-size: 14px;
+            height: 39px;
+            line-height: 39px;
+            border-bottom: 1px solid #b5b5b5;
+        }
+        .content_lnb li > a:hover {
+            height: 38px;
+            line-height: 38px;
+            border-bottom: 2px solid #edbf42;
+        } 
+        .content_body > .content_section > h3 {
+            padding: 10px;
+        }
+        /*푸터*/
+        .main_footer {
+            border-top: 2px solid #ccc;
+            background: #eee;
+            color: #777;
+            height: 150px;
+            line-height: 150px;
+        }
+        .main_footer > h4 {
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="wrap">
+        <header class="main_header">
+            <a href="index.html">
+                <img src="image/img_logo.png" alt="현대백화점" height="40px">
+                <h1 class="hidden">현대백화점</h1>
+            </a>
+        </header>
+        <nav class="main_gnb">
+            <ul>
+                <!--<li><a href="content.html">콘텐츠</a></li>
+                <li><a href="client.html">클라이언트</a></li>
+                <li><a href="device.html">디바이스</a></li>
+                <li><a href="account.html">계정</a></li>-->
+                <li><a class="active" href="#">콘텐츠</a></li>
+                <li><a href="#">클라이언트</a></li>
+                <li><a href="#">디바이스</a></li>
+                <li><a href="#">계정</a></li>
+            </ul>
+        </nav> 
+        <div class="content_wrap">
+            <div class="content">
+                <header class="content_header">
+                    <h2>계정 관리</h2>
+                </header>
+                <div class="content_body">
+                    <div class="content_section">
+                        <h3>등록</h3>
+                        <fieldset>
+                            
+                        </fieldset>
+                    </div>
+                    <nav class="content_lnb">
+                        <ul>
+                            <li><a href="#">등록</a></li>
+                            <li><a href="#">수정</a></li>
+                            <li><a href="#">조회</a></li>
+                            <li><a href="#">삭제</a></li>
+                            <li><a href="#">로그</a></li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+        </div>
+        <footer class="main_footer">
+            <h4>COPYRIGHTⓒ HYUNDAI DEPARTMENT STORE GROUP Co. Ltd. ALL RIGHTS RESERVED.</h4>
+        </footer>
+    </div> 
+</body>
+</html>

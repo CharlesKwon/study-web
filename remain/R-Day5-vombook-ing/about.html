@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VOMBOOK</title>
+	<meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+           <div class="header">
+              <a class="logo" href="index.html"><img src="images/logo.png"></a> 
+              <ul class="gnb">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+           </div>
+           <div class="contents">
+		<div class="about-header">
+			<div class="about-text">
+			    <img src="images/about-title.png">
+			    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue</p>
+			</div>
+			<img class="about-logo" src="images/about-logo.png">
+		</div>
+	    </div>
+           <div class="footer">vombook © 2015</div>
+        </div>
+
+        <script>
+            $('.about-logo').delay(0).addClass('show', 300, 'easeInOutQuad');
+//            $('.about-logo').addClass('show', 300, 'easeIn');
+            $('.about-text').delay(500).fadeIn(500);
+	    </script>
+    </body>
+</html>

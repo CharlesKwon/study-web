@@ -1,0 +1,177 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pc="http://schemas.microsoft.com/prototyping/2010/controls" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Name="VBlogScreens_WritePage_Name"
+	mc:Ignorable="d"
+	x:Class="VBlogScreens.WritePage"
+	Width="1024" Height="768">
+
+	<UserControl.Resources>
+
+		<DataTemplate x:Key="ItemTemplate3">
+			<StackPanel>
+				<TextBlock Text="{Binding Tag}" Style="{DynamicResource BasicTextBlock-Sketch}"/>
+			</StackPanel>
+		</DataTemplate>
+
+		<DataTemplate x:Key="ItemTemplate">
+			<Grid x:Name="root">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<Button Content="{Binding Status}" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Width="100" Grid.Column="0" Margin="5,5,5,0" Background="{Binding StatusColor}" Foreground="White"/>
+				<Image Source="{Binding Writer}" Stretch="UniformToFill" Width="30" Height="30" Margin="5,0,0,0" Grid.Column="1"/>
+				<TextBlock Text="{Binding Title}" Style="{DynamicResource BasicTextBlock-Sketch}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,5,0,5" FontSize="22" Grid.Column="2"/>
+				<TextBlock Text="{Binding Date}" Style="{DynamicResource BasicTextBlock-Sketch}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" Grid.Column="3"/>
+				<Button Content="Del" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Width="55" Grid.Column="4" Margin="0,5,5,0"/>
+				<Button Content="Edit" HorizontalAlignment="Left" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" Width="55" Grid.Column="5" Margin="0,5,5,0"/>
+			</Grid>
+		</DataTemplate>
+		<ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+			<VirtualizingStackPanel IsItemsHost="True" Orientation="Horizontal"/>
+		</ItemsPanelTemplate>
+
+		<DataTemplate x:Key="ItemTemplate1">
+			<CheckBox Content="{Binding Page}" Style="{DynamicResource CheckBox-Sketch}" IsChecked="{Binding Selected}"/>
+		</DataTemplate>
+		<ItemsPanelTemplate x:Key="ItemsPanelTemplate2">
+			<WrapPanel/>
+		</ItemsPanelTemplate>
+		<DataTemplate x:Key="ItemTemplate2">
+			<Grid x:Name="root" Margin="5">
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}"/>
+				<Grid d:LayoutOverrides="Width" Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="{Binding Tag}" Style="{DynamicResource BasicTextBlock-Sketch}" d:LayoutOverrides="Height" Margin="5,0,10,0" VerticalAlignment="Center" FontSize="22"/>
+					<Button Content="Delete" HorizontalAlignment="Stretch" Style="{DynamicResource Button-Sketch}" d:LayoutOverrides="Height" Grid.Column="1"/>
+				</Grid>
+			</Grid>
+		</DataTemplate>
+		<DataTemplate x:Key="ItemTemplate4">
+			<Grid Margin="0,0,10,0" Width="64" Height="64">
+				<Image Source="{Binding Image}" HorizontalAlignment="Left" Height="Auto" Width="64" Stretch="UniformToFill"/>
+				<Button Content="X" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+			</Grid>
+		</DataTemplate>
+	</UserControl.Resources>
+
+	<Grid x:Name="root" Background="#FFE2E2E2" DataContext="{Binding Source={StaticResource SampleDataSource}}" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+		<Grid Background="White" Width="900" Margin="10" DataContext="{Binding Source={StaticResource SampleDataSource3}}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Grid x:Name="Top" Height="100">
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="{x:Null}"/>
+				<TextBlock HorizontalAlignment="Center" Style="{DynamicResource BasicTextBlock-Sketch}" VerticalAlignment="Center" FontSize="36" TextAlignment="Center" Text="TeamBlog - Vdev"/>
+				<Grid x:Name="Log" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Center">
+					<Grid x:Name="LogOut" HorizontalAlignment="Right" VerticalAlignment="Center">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="100"/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<TextBlock HorizontalAlignment="Left" Style="{DynamicResource BasicTextBlock-Sketch}" Text="ID" VerticalAlignment="Center" Margin="-32,0,0,0" FontSize="22"/>
+						<TextBox Style="{DynamicResource BasicTextBox-Sketch}" TextWrapping="Wrap" Text="charles" Height="32" VerticalContentAlignment="Center" Padding="30,0,0,0"/>
+						<Button Content="LogOut" Style="{DynamicResource Button-Sketch}" Width="75" Grid.Column="1" Grid.RowSpan="2" Margin="10,0,0,0">
+							<i:Interaction.Triggers>
+								<i:EventTrigger EventName="Click">
+									<pi:NavigateToScreenAction TargetScreen="VBlogScreens.MainPage"/>
+								</i:EventTrigger>
+							</i:Interaction.Triggers>
+						</Button>
+						<Image Source="Images/charles.jpg" Width="26" Height="26" Margin="1,0,67,0"/>
+					</Grid>
+				</Grid>
+			</Grid>
+			<Grid Grid.Row="1">
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="{x:Null}"/>
+				<Grid Margin="10">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<StackPanel Margin="0,0,0,10">
+						<Grid Margin="0,0,0,10">
+							<StackPanel Background="#FFCDCDCD" Orientation="Horizontal" d:LayoutOverrides="Width, Height" HorizontalAlignment="Right">
+								<Button Content="Save new post" Style="{DynamicResource Button-Sketch}" FontSize="24" Height="36" Margin="5" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition">
+									<i:Interaction.Triggers>
+										<i:EventTrigger EventName="Click">
+											<pi:NavigateToScreenAction TargetScreen="VBlogScreens.AdminPage"/>
+										</i:EventTrigger>
+									</i:Interaction.Triggers>
+								</Button>
+								<Button Content="Post new post" Style="{DynamicResource Button-Sketch}" FontSize="24" Height="36" Margin="5" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition">
+									<i:Interaction.Triggers>
+										<i:EventTrigger EventName="Click">
+											<pi:NavigateToScreenAction TargetScreen="VBlogScreens.DetailPage"/>
+										</i:EventTrigger>
+									</i:Interaction.Triggers>
+								</Button>
+							</StackPanel>
+							<Button Content="Cancel new post" Style="{DynamicResource Button-Sketch}" FontSize="24" Height="36" HorizontalAlignment="Left">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="Click">
+										<pi:NavigateToScreenAction TargetScreen="VBlogScreens.AdminPage"/>
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+							</Button>
+						</Grid>
+						<Grid Background="#FFCDCDCD" Margin="0,0,0,5">
+							<TextBlock Style="{DynamicResource BasicTextBlock-Sketch}" Text="Select tag" FontSize="24" Margin="5"/>
+						</Grid>
+						<StackPanel Orientation="Horizontal">
+							<CheckBox Content="#All" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" IsChecked="True" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+							<CheckBox Content="#XAML" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+							<CheckBox Content="#C#" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+							<CheckBox Content="#HTML5" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+							<CheckBox Content="#CSS3" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+							<CheckBox Content="#jQuery" Style="{DynamicResource CheckBox-Sketch1111}" FontSize="22" d:LayoutOverrides="LeftPosition, RightPosition" Margin="0,0,10,0"/>
+						</StackPanel>
+					</StackPanel>
+					<Grid Grid.Row="1">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Grid x:Name="Image" Margin="0,0,0,10">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<TextBox Style="{DynamicResource BasicTextBox-Sketch}" TextWrapping="Wrap" Text="New Image" Height="32" VerticalContentAlignment="Center" Padding="5,0,0,0"/>
+							<Button Content="Find Image File" Style="{DynamicResource Button-Sketch}" Grid.Column="1" Margin="10,0,0,0" Width="125"/>
+						</Grid>
+						<ListBox ItemTemplate="{DynamicResource ItemTemplate4}" ItemsSource="{Binding Collection}" Style="{DynamicResource ListBox-Sketch}" Grid.Row="1" ItemsPanel="{DynamicResource ItemsPanelTemplate2}" Margin="0,0,0,10"/>
+						<Grid x:Name="Write" Grid.Row="2">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<TextBox Style="{DynamicResource BasicTextBox-Sketch}" TextWrapping="Wrap" Padding="10" Text="blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ &#xD;&#xA;&#xD;&#xA;blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ &#xD;&#xA;&#xD;&#xA;blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ &#xD;&#xA;blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ &#xD;&#xA;blah~ blah~ blah~ blah~ blah~ blah~ blah~ blah~ "/>
+						</Grid>
+					</Grid>
+				</Grid>
+			</Grid>
+			<Grid x:Name="Bottom" Height="50" Grid.Row="2">
+				<pc:SketchRectangleUC Style="{DynamicResource Rectangle-Sketch}" Background="{x:Null}"/>
+				<TextBlock HorizontalAlignment="Center" Style="{DynamicResource BasicTextBlock-Sketch}" VerticalAlignment="Center" FontSize="14" TextAlignment="Center" Text="Copyright &amp; Vdev. All rights reserved."/>
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

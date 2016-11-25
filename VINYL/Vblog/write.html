@@ -1,0 +1,95 @@
+<html lang="ko">
+<!--class="noscroll"-->
+<head>
+    <meta charset="utf-8">
+    <title>Write-Vblog</title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+    
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
+<style>
+</style>
+</head>
+    
+<body>
+    <div class="container">
+        <!--장애인용<a href="#main" class="skip">메인으로 바로가기</a>-->
+        <header class="header">
+            <a class="gomain" href="index.html"><h1>Vblog</h1></a>
+                <!--logincomplete-->
+            <div class="logout logincomplete">
+                <p class="writer-name">gofogogofogogofogogofogo</p>
+                <img class="writer-photo" src="images/writer_gofogo.jpg">
+				<button type="summit">X</button>
+            </div>
+        </header>
+        <div class="body">
+            <main id="write-main" class="write-main">
+                <div class="write">
+                    <div class="write-menu">
+                        <button type="submit">취소</button>
+                        <button type="submit">임시저장</button>
+                        <button type="submit">개시</button>
+                    </div>
+                    <div class="write-form">
+                        <form>
+                            <legend><h2>아티클 이미지</h2></legend>	
+                            <div class="thumb-list">
+                                <ol>
+                                    <li><img src="images/thumb_A.jpg"><button type="button">X</button></li>
+                                    <li><img src="images/thumb_B.jpg"><button type="button">X</button></li>
+                                </ol>
+                                <button class="btn-addthumb" type="button">이미지 추가</button> 
+                            </div>
+                            <legend><h2>아티클 분문</h2></legend>
+                            <div class="form-group">
+                                <label for="title">제목</label>
+                                <input id="title" type="text" class="form-control" required placeholder="제목 입력">
+                            </div>
+                            <div class="form-group">
+                                <label for="content">분문</label>
+                                <textarea id="content" class="form-control" required placeholder="분문 입력"></textarea>
+                            </div>
+                            <div class="tag-list">
+                                <legend><h2>아티클 태그</h2></legend>
+                                <ul>
+                                    <li>
+                                        <h3>All</h3>
+                                        <input id="tag0" type="checkbox"></input>
+                                        <label for="tag0"></label>
+                                    </li>
+                                    <li>
+                                        <h3>TAG 1</h3>
+                                        <input id="tag1" type="checkbox"></input>
+                                        <label for="tag1"></label>
+                                    </li>
+                                    <li>
+                                        <h3>TAG 2</h3>
+                                        <input id="tag2" type="checkbox"></input>
+                                        <label for="tag2"></label>
+                                    </li>
+                                    <li>
+                                        <h3>TAG 3</h3>
+                                        <input id="tag3" type="checkbox"></input>
+                                        <label for="tag3"></label>
+                                    </li>
+                                    <li>
+                                        <h3>TAG 4</h3>
+                                        <input id="tag4" type="checkbox"></input>
+                                        <label for="tag4"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <p>© 2015 VINYL I INC. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VOMBOOK</title>
+	<meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+        <!-- Add fancyBox -->
+        <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+        <script type="text/javascript" src="libs/fancybox/jquery.fancybox.pack.js"></script>
+        
+        <!--jQuery Plugins-->
+        <link rel="stylesheet" href="libs/bxslider/jquery.bxslider.css">
+        <script src="libs/bxslider/jquery.bxslider.min.js"></script>
+        
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+           <div class="header">
+              <a class="logo" href="index.html"><img src="images/logo.png"></a> 
+              <ul class="gnb">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+           </div>
+           <div class="contents">
+               <div class="category">
+                   <a data-slide-index="0" class="active">Photo</a>
+                   <a data-slide-index="1">Graphic</a>
+                   <a data-slide-index="2">Design</a>
+               </div>
+               <ul class="works-list">
+                   <li>
+                      <div><a rel="p0" href="works/aaa.jpg"><img src="works/aaa-thumb.jpg"></a></div>
+                      <div><a rel="p0" href="works/bbb.jpg"><img src="works/bbb-thumb.jpg"></a></div>
+                      <div><a rel="p0" href="works/ccc.jpg"><img src="works/ccc-thumb.jpg"></a></div>
+                      <div><a rel="p0" href="works/ddd.jpg"><img src="works/ddd-thumb.jpg"></a></div>
+                      <div><a rel="p0" href="works/eee.jpg"><img src="works/eee-thumb.jpg"></a></div>
+                      <div><a rel="p0" href="works/fff.jpg"><img src="works/fff-thumb.jpg"></a></div>
+                   </li>
+                   <li>
+                      <div><a rel="p1" href="works/ggg.jpg"><img src="works/ggg-thumb.jpg"></a></div>
+                      <div><a rel="p1" href="works/hhh.jpg"><img src="works/hhh-thumb.jpg"></a></div>
+                      <div><a rel="p1" href="works/iii.jpg"><img src="works/iii-thumb.jpg"></a></div>
+                      <div><a rel="p1" href="works/jjj.jpg"><img src="works/jjj-thumb.jpg"></a></div>
+                      <div><a rel="p1" href="works/kkk.jpg"><img src="works/kkk-thumb.jpg"></a></div>
+                   </li> 
+                   <li>
+                       <div><a rel="p2" href="works/lll.jpg"><img src="works/lll-thumb.jpg"></a></div>
+                       <div><a rel="p2" href="works/mmm.jpg"><img src="works/mmm-thumb.jpg"></a></div>
+                       <div><a rel="p2" href="works/nnn.jpg"><img src="works/nnn-thumb.jpg"></a></div>
+                       <div><a rel="p2" href="works/ooo.jpg"><img src="works/ooo-thumb.jpg"></a></div>
+                   </li>
+               </ul>
+	       </div>
+           <div class="footer">vombook © 2015</div>
+        </div>
+
+        <script>
+            $('.works-list').bxSlider({
+                controls: false,
+                mode: 'fade',
+                pagerCustom: '.category'                
+            });
+            $('.works-list a').fancybox(); 
+	    </script>
+    </body>
+</html>
