@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>선택자 : 문서의 타이틀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            padding: 10px;
+            width: 580px;
+            border: 1px solid #aaa;
+            background: #ddd;
+        }
+        h1 {
+            background: #0084b4;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        /*상단*/ 
+        nav ul:after {
+            content: "";
+            display: block;
+            clear: both;            
+        }
+        nav ul ul {
+            position: absolute;
+            top: 46px;
+            left: 0;
+            width: 500px;
+        }
+        nav li{
+            float: left;
+            list-style: none;
+            position: relative;
+            border-right: 2px solid #ddd;
+        }
+        nav>ul>li {
+            background: #fff;
+        }
+        nav li {
+            background: #bbb;
+        }
+        nav>ul>li:nth-child(3) a{
+            background: #628;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        a {
+            display: block;
+            padding: 5px 12px; 
+        }
+        a[title], /*속성으로*/
+        a[href*="facebook"], /*속성의 일부 값으로*/
+        a[href^="kr"], /*속성의 시작 값으로*/
+        a[href$=".me"] /*속성의 끝 값으로*/ 
+        { 
+            font-size: 20px;
+            text-decoration: none;
+        }  
+        /*하단*/
+        main {
+            margin-top: 50px;
+        }
+        article p { /*모든 p 요소에 적용*/
+            color: #fff;
+        }
+        article h2+p { /*h2 요소 바로 뒤에 오는 p 요소에만 적용*/
+            color: #628; 
+        } 
+        article h2~p { /*h2 요소에 인접하는 모든 p 요소에 적용*/
+            margin: 10px 0;
+        }
+        article h2~p:last-of-type {
+/*            font-size: 12px;*/
+        }
+        input {
+            width: 200px;
+            height: 32px;
+            padding: 0 10px;
+        } 
+        input[type="text"] { /*속성의 정확한 값*/ 
+            border: 2px solid #628;
+        }
+        main li {
+            padding: 10px;
+        }
+        main li:first-child {
+            border-radius: 10px 10px 0 0 ;
+            border-bottom: 1px solid #eee;
+        }
+        main li:last-child {
+            border-radius: 0 0 10px 10px;
+            border-top: 1px solid #eee;
+        }
+        main li:nth-child(even) {
+/*            background: #c0deed;*/
+        }
+        li[data-group~="Cat"] {
+            background: #8ec1da;
+        }
+    </style>
+</head>
+<body>
+	<h1>다양한 선택자</h1>
+    <nav>
+        <ul>
+            <li><a title="대 메뉴 1">확장 메뉴</a>
+                <ul>
+                    <li><a>하위 메뉴 1</a></li>
+                    <li><a>하위 메뉴 2</a></li>
+                    <li><a>하위 메뉴 2</a></li>
+                </ul>
+            </li>
+            <li><a href="http://www.facebook.com" target="_blank">페이스북</a></li>
+            <li><a href="http://charlesk.tistory.com" target="_blank">티스토리</a></li>
+            <li><a href="http://loveu012u.blog.me" target="_blank">네이버블로그</a></li>
+            <li><a href="kr.linkedin.com/in/charles82" target="_blank">링크드인</a></li>
+        </ul>
+    </nav>
+    <main>
+        <ul>
+            <li data-group="Article Cat">
+                <article>
+                    <h2>아티클 1의 제목</h2>
+                    <p>아티클 1의 본문 1 아티클 1의 본문 1 아티클 1의 본문 1</p>
+                    <p>아티클 1의 본문 2 아티클 1의 본문 2</p>
+                    <input type="text" value="텍스트 입력">
+                </article>
+            </li>
+            <li data-group="Article Dog">
+                <article>
+                    <h2>아티클 2의 제목</h2>
+                    <p>아티클 2의 본문 1 아티클 2의 본문 1 아티클 2의 본문 1</p>
+                    <p>아티클 2의 본문 2 아티클 2의 본문 2</p>
+                    <input type="submit">
+                </article>
+            </li>
+            <li data-group="Article Cat">
+                <article>
+                    <h2>아티클 3의 제목</h2>
+                    <p>아티클 3의 본문 1 아티클 3의 본문 1 아티클 3의 본문 1</p>
+                    <p>아티클 3의 본문 2 아티클 3의 본문 2</p>
+                    <input type="range">
+                </article>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<mata name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,maximum-scale=2, user-scalable=no">-->
+    <meta name="viewport" content="width=device-width,initial-sacle=1.0"> 
+    <title>모바일 기초</title>
+    <style>
+        /*초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'NG', 'Helvetica', sans-serif;
+            min-width: 760px;
+            /*position: relative;*/
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        @font-face {
+            font-family: 'NG';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+            src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+                 url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+        }
+        /*예외*/
+        .body > p {
+            position: fixed;
+            right: 5px;
+            bottom: 5px; 
+            border: 1px solid red;
+        }
+        .gototop {
+            position: fixed;
+            left: 5px;
+            bottom: 5px; 
+            border: 1px solid red;
+            /*text-indent: -99999px;*/
+        }
+        .noheader {
+            visibility: hidden;
+            height: 0px;
+        }
+        .wrap {
+            background: white;
+/*            border: 1px solid red;*/
+        }
+        /*헤더*/
+        .main_header {
+            height: 45px;
+            line-height: 45px;
+            background: #088;
+            border-bottom: 1px solid black;
+        }
+        .main_header h1 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+        /*토글 언어*/
+        .hidden {
+            display: none;
+        }
+        .main_header > .toggle_project_year {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 5px;
+            top: 7px;
+            background: url('sprites_green.png');
+            background-position: -62px 0px;
+            text-indent: -99999px;
+        }
+        .main_header .toggle_lang {
+            position: absolute;
+            right: 5px;
+            top: 0px;
+        }
+        /*년도 목록*/
+        .main_wrap {
+            background: #eee;
+        }
+        .main_lnb {
+            display: none;
+        }
+        .main_lnb > ul > li > a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 15px;
+            color: black;
+            border-top: 1px solid white;
+            border-bottom: 1px solid lightgray;
+        }
+        #toggle_project_year:checked + .main_lnb {
+            display: block;
+        }
+        #toggle_lang:checked + .toggle_lang {
+            color: white;
+/*            content: "언어 : 영어";*/
+        }
+        /*네비게이션*/
+        .main_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #0aa;
+        }
+        .main_gnb > ul.left {
+            overflow: hidden;
+            float: left;
+        }
+        .main_gnb > ul.right {
+            overflow: hidden;
+            float: right;
+        } 
+        .main_gnb > ul.left > li,
+        .main_gnb > ul.right > li {
+            float: left;
+            position: relative;
+        }
+        .main_gnb a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+        }
+        .main_gnb a:before {
+            display: block;
+            position: absolute;
+            top: 13px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+        .main_gnb a:hover {
+            color: black; 
+        }
+        /*콘텐츠*/
+        .main_wrap {
+            overflow: hidden;
+        }
+        .main_wrap > .main_lnb {
+/*            float: left;*/
+/*            width: 200px;*/
+        }
+        .main_wrap > .content_wrap {
+/*            float: left;*/
+            width: 100%;
+            *width: 99.9%; /*스타핵ie7버그*/
+            margin-right: -200px;
+        }
+        .main_wrap > .content_wrap > .content {
+            padding-right: 200px;
+        }
+        /*본문*/
+        .section_header { 
+            padding: 20px; 
+        }
+        .section_article { 
+            padding: 10px; 
+        }
+        .content {
+            background: white;
+            min-height: 598px;
+        } 
+        /*푸터*/
+        .main_footer {
+            padding: 10px;
+            border-top: 3px solid #088;
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) {
+        
+        }
+        @media screen and (min-width: 768px) {
+            .main_gnb > ul.right {
+                float: right;
+            } 
+            .main_wrap > .main_lnb {
+                float: left;
+                width: 200px;
+            }
+            .main_wrap > .content_wrap {
+                float: left;
+                margin-right: -200px;
+            }
+            .main_wrap > .content_wrap > .content {
+                padding-right: 200px;
+            }
+        }
+        @media screen and (min-width: 768px) and (min-width: 1025px) { 
+            .main_header {
+                height: 60px;
+/*                line-height: 60px;*/
+                padding-left: 10px;
+            }
+        }
+        @media screen and (min-width: 1025px) {
+            .main_header {
+                height: 100px;
+/*                line-height: 100px;*/
+            }
+            .main_header > h1 {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="body" onResize="showWindowSize();" onload="showWindowSize();">
+    <p>윈도우 사이즈</p>
+    <div class="gototop"><a href="#totop">최상으로</a></div>
+    <!--시작-->
+    <div id="totop" class="wrap">
+        <header class="main_header">
+            <label class="toggle_project_year" for="toggle_project_year">프로젝트 년도</label>
+            <h1>권영철</h1>
+            <input id="toggle_lang" class="hidden" type="checkbox"/>
+            <label class="toggle_lang" for="toggle_lang">언어 : 한글</label>
+        </header>
+        <div class="main_gnb">
+            <h2 class="noheader">메인 메뉴</h2>
+            <ul class="left">
+                <li><a href="#">프로젝트</a></li>
+                <li><a href="#">프로필</a></li>
+                <li><a href="#">수상</a></li>
+                <li><a href="#">기술</a></li>
+                <li><a href="#">경력</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </div>
+        <div class="main_wrap">
+            <input id="toggle_project_year" class="hidden" type="checkbox"/>
+            <nav class="main_lnb">
+                <h2 class="noheader">년도-프로젝트</h2>
+                <ul>
+                    <li><a href="#year2015">2015</a></li>
+                    <li><a href="#year2014">2014</a></li>
+                    <li><a href="#year2013">2013</a></li>
+                    <li><a href="#year2012">2012</a></li>
+                    <li><a href="#year2011">2011</a></li>
+                    <li><a href="#year2010">2010</a></li>
+                </ul>
+            </nav>
+            <div class="content_wrap">
+                <div class="content">
+                    <section id="year2015" class="main_section">
+                        <header class="section_header">
+                            <h1>2015년</h1>
+                        </header>
+                        <article class="section_article">
+                            <h2>프로젝트 명칭</h2>
+                            <time>2015.12.25</time>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                    </section>
+                    <section id="year2014" class="main_section">
+                        <header class="section_header">
+                            <h1>2014년</h1>
+                        </header>
+                        <article class="section_article">
+                            <h2>프로젝트 명칭</h2>
+                            <time>2014.11.11</time>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                    </section>
+                    <section id="year2013" class="main_section">
+                        <header class="section_header">
+                            <h1>2013년</h1>
+                        </header>
+                        <article class="section_article">
+                            <h2>프로젝트 명칭</h2>
+                            <time>2013.01.01</time>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                    </section>
+                    <section id="year2012" class="main_section">
+                        <header class="section_header">
+                            <h1>2012년</h1>
+                        </header>
+                        <article class="section_article">
+                            <h2>프로젝트 명칭</h2>
+                            <time>2012.01.01</time>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer class="main_footer">
+            <h3>Mobile - Layout</h3>
+            <address>By Charles</address>
+        </footer>
+    </div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="default.js"></script>
+</body>
+</html>

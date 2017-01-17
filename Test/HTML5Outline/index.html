@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Outline-HTML5</title>
+    <style>
+        *{
+            margin: 0px;
+            border-radius: 5px;
+        }
+        header, footer { 
+            line-height: 30px;
+        }
+        .container {
+            background-color: black;
+            padding: 5px;
+/*            width: 500px;*/
+        }
+        .header {
+            background-color: lightgray;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        nav {
+            background-color: lightblue;
+            width: 20%; height: 300px;
+            margin-right: 5px;
+            float: left;
+        }
+        section {
+            background-color: skyblue;
+            height: 300px;
+/*            margin-bottom: 5px;*/
+            overflow: auto;
+        }
+        aside {
+            background-color: darkgray;
+            width: 20%; height: 300px;
+            margin-left: 5px;
+            float: right;
+        }
+        .footer {
+            background-color: gray;
+            clear: both;
+            height: 50px;
+            margin-top: 5px;
+        }
+        h1, h2 {
+            font-size: 16px;
+            font-family: serif;
+            position: relative;
+            top: 5px;
+            text-align: center;
+        }
+        .section {
+            font-size: 16px;
+            font-family: serif; 
+            font-weight: bold;
+            position: relative;
+            top: 5px;
+            text-align: center;
+            margin: 5px;
+        }
+        .sHeader {
+            background-color: lightgray;
+            height: 10%;
+            margin-top: 10px;
+        }
+        .sArticle {
+            background-color: white;
+            height: 64%;
+        } 
+        .sFooter {
+            background-color: gray;
+            height: 10%;
+        }
+        p {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header"><h1>header</h1></header>
+        <div>
+            <nav><h1>nav</h1></nav>
+            <aside><h1>aside</h1></aside>
+            <main>
+                <section>
+                    <h1>section</h1> 
+                    <header class="section sHeader">header</header>
+                    <article class="section sArticle">
+                        <h2>article</h2>
+                        <p>content</p>
+                    </article>
+                    <footer class="section sFooter">footer</footer> 
+                </section>
+            </main>
+        </div>
+        <footer class="footer"><h1>footer</h1></footer>
+    </div>
+</body>
+</html>

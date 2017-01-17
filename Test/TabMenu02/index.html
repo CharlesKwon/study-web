@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TabControl 02</title> 
+<style>  
+html, body {
+    height: 300px;
+}
+div {
+    box-sizing: border-box;
+}
+h2, ul, a, p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none; 
+    font-family: Dotum;
+}
+body {
+    background: #eee;
+}
+.gnb {
+/*    border: 1px solid blue;*/
+    background: #ddd;
+    position: relative;
+}  
+.gnb h2 {
+    padding: 10px;
+}
+    
+/*    상위 메뉴*/
+.gnb ul {
+/*    border: 1px solid red;*/
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+.gnb ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.gnb li {
+/*    border: 1px solid lime;*/
+    float: left;
+    border-radius: 15px 15px 0 0px;
+}
+.gnb li a {
+    background: #aaa;
+    border-radius: 15px 15px 0 0px;
+    padding: 10px 20px;
+    color: black;
+}
+.gnb li.active a{
+    background: white;
+    font-weight: bold;
+}
+    
+/*    하위 메뉴*/
+.gnb li div {
+    display: none;
+    width: 100%;
+    border: 10px solid white;
+    color: white;
+    position: absolute;
+    left: 0;
+/*    임의 크기*/
+    padding: 110px 0;
+}
+.gnb li.active div
+{
+    display: block;  
+}
+p {
+    padding: 5px;
+    border-top: 1px solid black;
+}
+</style>
+</head>
+    
+<body>
+<nav class="gnb">
+    <h2>탭 콘트롤 (Tab Control)</h2>
+    <ul>
+        <li class="active">
+            <a href="#">탭 메뉴 1</a>
+            <div style="background:red;">콘텐츠1</div>
+        </li>
+        <li>
+            <a href="#">탭 메뉴 2</a>
+            <div style="background:blue;">콘텐츠2</div>
+        </li>
+        <li>
+            <a href="#">탭 메뉴 3</a>
+            <div style="background:lime;">콘텐츠3</div>
+        </li>
+<!--
+        <li>
+            <a href="#">탭 메뉴 4</a>
+            <div style="background:orange;"></div>
+        </li>
+-->
+    </ul>
+    <p>-End area-</p>
+</nav>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="default.js"></script>
+</body>
+</html>

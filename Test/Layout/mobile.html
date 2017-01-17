@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, user-scalable=no"/>
+    <title>모바일 기초</title>
+    <style>
+        /*초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body, .warp {
+            height: 100%;
+        }
+        body {
+            font-family: 'Helvetica', sans-serif;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .warp {
+            background: red;
+        }
+        /*헤더*/
+        .main_header {
+            height: 45px;
+            background: #088;
+            position: relative;
+            text-align: center;
+            line-height: 45px;
+        }
+        .main_header > h1 {
+            color: white;
+        }
+        .main_header > a,
+        .main_header > label {
+    /*        border: 1px solid white;*/
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+        .main_header > a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+            background: url('sprites_green.png');
+            background-position: 0;
+            text-indent: -99999px;
+        }
+        .main_header > label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+            background: url('sprites_green.png');
+            background-position: -62px 0px;
+            text-indent: -99999px;
+        }
+        /*토글 목록*/
+        #toggle {
+            display: none;
+        }
+        #toggle + .wrap > .toggle_gnb_wrap {
+            display: none;
+        }
+        #toggle:checked + .wrap > .toggle_gnb_wrap {
+            display: block;
+        }
+        .toggle_gnb_wrap {
+            background: black;
+            padding: 15px;
+        }
+        .toggle_gnb {
+            background: white;
+            padding: 5px;
+        }
+        .toggle_gnb > ul {
+            overflow: hidden;
+        }
+        .toggle_gnb > ul > li {
+            float: left;
+            width: 80px;
+        }
+        /*네비게이션1*/
+        .top_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #0aa;
+        }
+        .top_gnb > div > a {
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+        /*네비게이션2*/
+        .bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        } 
+        .bottom_gnb > div {
+            display: table-cell;
+            position: relative;
+        } 
+        .bottom_gnb > div > a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .bottom_gnb > div > a:before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+        /*본문*/
+        .section_header { 
+            padding: 20px; 
+        }
+        .section_article { 
+            padding: 10px; 
+        }
+        /*푸터*/
+        .main_footer {
+            padding: 10px;
+            border-top: 3px solid #088;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="toggle" type="checkbox"/>
+    <div class="wrap">
+        <header class="main_header">
+            <a class="left" href="#"></a>
+            <h1>Charles Kwon</h1>
+            <label class="right" for="toggle" onclick="">Toggle</label>
+        </header>
+        <div class="toggle_gnb_wrap">
+            <div class="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav class="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section class="main_section">
+            <header class="section_header">
+                <h1>권영철</h1>
+                <time>010-4522-8103</time>
+            </header>
+            <article class="section_article">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+                <br/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+                <br/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+            </article>
+        </section>
+        <footer class="main_footer">
+            <h3>Mobile - Layout</h3>
+            <address>By Charles</address>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
